@@ -1,0 +1,45 @@
+# TulaFIL
+
+TulaFIL is a decentralized marketplace for renting storage space on the Filecoin network. The marketplace is built on top of the Filecoin network, and it allows users to rent storage space from storage providers using Filecoin (FIL) as the payment currency.
+
+
+## Usage
+
+To use the TulaFIL marketplace, users need to first install a Filecoin wallet and acquire some FIL. Once they have FIL, they can search for storage providers on the marketplace, view the details of the providers, and make a storage rental payment using FIL. The rented storage space can then be used to store data on the Filecoin network.
+
+## Adding a SP
+
+To add a storage provider to the marketplace, you need to call the addProvider function of the TulaFIL contract. The function takes three parameters:
+
+    _name : The name of the provider
+    _storageCapacity: The amount of storage capacity offered by the provider
+    _price: The price per GB of storage per month
+
+You can interact with the contract via a web3 enabled browser like Mist or Metamask or via a dapp browser like DappHub
+
+## Renting Storage
+
+To rent storage space from a provider, you need to call the rentStorage function of the TulaFIL contract. The function takes two parameters:
+
+    _provider: The address of the provider
+    _storage: The amount of storage space to be rented (in GB)
+    _data: The data that needs to be stored on the Filecoin network
+
+The function will return the CID (Content Identifier) of the data, which is the identifier of the data on the Filecoin network. The function will also transfer the FIL payment to the provider and update the storage capacity of the provider accordingly.
+
+## Retrieving Data
+
+To retrieve the data stored in the rented storage space, you will need to use the CID returned by the rentStorage function to call the retrieveData function of the TulaFIL contract. The function takes one parameter:
+
+    _cid: The CID of the data
+
+The function will return the data that was stored on the Filecoin network.
+
+## Deployment
+
+The TulaFIL smart contract can be deployed to the Filecoin network using the LotuS-client library and a compatible wallet.
+
+## Security
+
+TulaFIL is yet to be audited. Please use with caution.
+
