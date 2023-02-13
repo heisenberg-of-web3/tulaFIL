@@ -8,6 +8,7 @@ contract("TulaFIL", async (accounts) => {
 
     // test case to check that the function calculates the total cost correctly
     it("calculate total cost correctly", async () => {
+        console.log("Calculate total cost")
         await tulaFIL.addProvider("Provider 1", 100, 1)
         const provider = accounts[0]
         const storage = 10
